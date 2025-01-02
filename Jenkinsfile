@@ -9,8 +9,8 @@ pipeline {
     
     parameters {
         // string(name: 'VERSION',defaultValue: "", description: 'version to deploy on pord.') // One type to declare parameters.
-        choice(name: 'VERSION', choices: [1.0.0, 1.1.0, 1.2.0], description : 'version to deploy on pord.')
-        booleanParam(name: 'executeTest', defaultValue=true, description : '')
+        choice(name: 'VERSION', choices: ['1.0.0', '1.1.0', '1.2.0'], description : 'version to deploy on pord.')
+        booleanParam(name: 'executeTest', defaultValue:true, description : '')
     }
     stages {
         stage("checkout") {
